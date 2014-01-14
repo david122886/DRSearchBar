@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "DRSearchBar.h"
 @interface ViewController ()
 
 @end
@@ -17,6 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    DRSearchBar *searchBar = [[DRSearchBar alloc] initWithFrame:(CGRect){20,100,700,50}];
+    [self.view addSubview:searchBar];
+//    NSLog(@"%@",searchBar.subviews);
+    for (UIView *sub in searchBar.subviews) {
+        NSLog(@"%@",sub.subviews);
+    }
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
