@@ -17,7 +17,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    DRSearchBar *searchBar = [[DRSearchBar alloc] initWithFrame:(CGRect){10,100,300,50}];
+    DRSearchBar *searchBar = [[DRSearchBar alloc] initWithFrame:(CGRect){10,100,300,30}];
+    searchBar.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:searchBar];
 //    NSLog(@"%@",searchBar.subviews);
     for (UIView *sub in searchBar.subviews) {

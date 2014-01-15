@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63AB496918862105004E0824 /* DRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB496818862105004E0824 /* DRSearchBar.m */; };
 		63D284281883DFE8005D8721 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D284271883DFE8005D8721 /* Foundation.framework */; };
 		63D2842A1883DFE8005D8721 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D284291883DFE8005D8721 /* CoreGraphics.framework */; };
 		63D2842C1883DFE8005D8721 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D2842B1883DFE8005D8721 /* UIKit.framework */; };
@@ -23,7 +24,7 @@
 		63D284531883DFE8005D8721 /* DRSearchBarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D284521883DFE8005D8721 /* DRSearchBarTests.m */; };
 		63F1C2231884FAC200EE711F /* navi_search_blue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F1C21E1884FAC200EE711F /* navi_search_blue@2x.png */; };
 		63F1C2241884FAC200EE711F /* navi_search_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F1C21F1884FAC200EE711F /* navi_search_gray.png */; };
-		63F1C2251884FAC200EE711F /* searchBar_Backview.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F1C2201884FAC200EE711F /* searchBar_Backview.png */; };
+		63F1C2251884FAC200EE711F /* searchBar_Backview@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 63F1C2201884FAC200EE711F /* searchBar_Backview@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63AB496718862105004E0824 /* DRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSearchBar.h; sourceTree = "<group>"; };
+		63AB496818862105004E0824 /* DRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSearchBar.m; sourceTree = "<group>"; };
 		63D284241883DFE8005D8721 /* DRSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D284271883DFE8005D8721 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63D284291883DFE8005D8721 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -58,7 +61,7 @@
 		63D284521883DFE8005D8721 /* DRSearchBarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRSearchBarTests.m; sourceTree = "<group>"; };
 		63F1C21E1884FAC200EE711F /* navi_search_blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_search_blue@2x.png"; sourceTree = "<group>"; };
 		63F1C21F1884FAC200EE711F /* navi_search_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = navi_search_gray.png; sourceTree = "<group>"; };
-		63F1C2201884FAC200EE711F /* searchBar_Backview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchBar_Backview.png; sourceTree = "<group>"; };
+		63F1C2201884FAC200EE711F /* searchBar_Backview@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchBar_Backview@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +173,8 @@
 		63F1C2191884FAC200EE711F /* DRSearchBar */ = {
 			isa = PBXGroup;
 			children = (
+				63AB496718862105004E0824 /* DRSearchBar.h */,
+				63AB496818862105004E0824 /* DRSearchBar.m */,
 				63F1C21D1884FAC200EE711F /* images */,
 			);
 			path = DRSearchBar;
@@ -180,7 +185,7 @@
 			children = (
 				63F1C21E1884FAC200EE711F /* navi_search_blue@2x.png */,
 				63F1C21F1884FAC200EE711F /* navi_search_gray.png */,
-				63F1C2201884FAC200EE711F /* searchBar_Backview.png */,
+				63F1C2201884FAC200EE711F /* searchBar_Backview@2x.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -263,7 +268,7 @@
 			files = (
 				63D284401883DFE8005D8721 /* Images.xcassets in Resources */,
 				63F1C2231884FAC200EE711F /* navi_search_blue@2x.png in Resources */,
-				63F1C2251884FAC200EE711F /* searchBar_Backview.png in Resources */,
+				63F1C2251884FAC200EE711F /* searchBar_Backview@2x.png in Resources */,
 				63D284321883DFE8005D8721 /* InfoPlist.strings in Resources */,
 				63F1C2241884FAC200EE711F /* navi_search_gray.png in Resources */,
 				63D2843B1883DFE8005D8721 /* Main.storyboard in Resources */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D2843E1883DFE8005D8721 /* ViewController.m in Sources */,
+				63AB496918862105004E0824 /* DRSearchBar.m in Sources */,
 				63D284381883DFE8005D8721 /* AppDelegate.m in Sources */,
 				63D284341883DFE8005D8721 /* main.m in Sources */,
 			);
