@@ -96,6 +96,8 @@
         
         self.searchTextLabel = [[UITextField alloc] initWithFrame:(CGRect){CGRectGetMaxX(self.searchBt.frame),0,frame.size.width - CGRectGetMaxX(self.searchBt.frame) - kcancelButtonWidth,frame.size.height}];
         self.searchTextLabel.delegate = self;
+        self.searchTextLabel.enablesReturnKeyAutomatically = YES;
+        self.searchTextLabel.returnKeyType = UIReturnKeySearch;
         self.searchTextLabel.backgroundColor = [UIColor clearColor];
         self.searchTextLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
         [self addSubview:self.searchTextLabel];
