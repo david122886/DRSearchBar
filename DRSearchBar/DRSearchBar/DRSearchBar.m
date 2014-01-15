@@ -82,7 +82,8 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.searchBackView = [[UIImageView alloc] initWithFrame:(CGRect){0,0,frame.size}];
-        self.searchBackView.image = [[UIImage imageNamed:@"searchBar_Backview.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 20, 1, 20) resizingMode:UIImageResizingModeStretch];
+//        self.searchBackView.image = [[UIImage imageNamed:@"searchBar_Backview.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 20, 1, 20) resizingMode:UIImageResizingModeStretch];
+        self.searchBackView.image = [UIImage imageNamed:@"searchBar_Backview.png"];
         self.searchBackView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
         [self addSubview:self.searchBackView];
         
