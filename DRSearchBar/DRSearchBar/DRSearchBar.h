@@ -12,6 +12,7 @@
 @property (strong,nonatomic) NSString *searchText;
 @property (weak,nonatomic) id<DRSearchBarDelegate> delegate;
 @property (strong, nonatomic)  UITextField *searchTextLabel;
+@property (assign,nonatomic) BOOL isSearch;
 @end
 
 @protocol DRSearchBarDelegate <NSObject>

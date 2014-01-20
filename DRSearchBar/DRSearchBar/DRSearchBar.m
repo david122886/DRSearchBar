@@ -18,6 +18,7 @@
 @end
 @implementation DRSearchBar
 - (void)cancelBtClicked:(id)sender {
+    _isSearch = NO;
     self.searchTextLabel.text = @"";
     [self.cancelBt setHidden:YES];
     [self.searchTextLabel resignFirstResponder];
@@ -39,7 +40,7 @@
 -(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
     NSString *oldString = [textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     NSString *newString = [string stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    if ([newString isEqualToString:@""]) {
+    if ([newString isEqualToString:@""] && oldString.length > 0) {
         oldString = [oldString stringByReplacingCharactersInRange:NSMakeRange(oldString.length-1, 1) withString:newString];
     }else{
         oldString = [NSString stringWithFormat:@"%@%@",oldString,newString];
@@ -57,6 +58,7 @@
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
+    self.isSearch = YES;
     if ([textField.text isEqualToString:@""]) {
         [self.cancelBt setHidden:YES];
     }else{
@@ -82,16 +84,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.searchBackView = [[UIImageView alloc] initWithFrame:(CGRect){0,0,frame.size}];
-//        self.searchBackView.image = [[UIImage imageNamed:@"searchBar_Backview.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(1, 20, 1, 20) resizingMode:UIImageResizingModeStretch];
+//        self.searchBackView.image = [[UIImage imageNamed:@"searchBar_Backview.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(15, 20, 15, 20) resizingMode:UIImageResizingModeStretch];
         self.searchBackView.image = [UIImage imageNamed:@"searchBar_Backview.png"];
-        self.searchBackView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin|UIViewAutoresizingFlexibleWidth;
+        self.searchBackView.autoresizingMask = UIViewAutoresizingNone;
         [self addSubview:self.searchBackView];
         
         self.searchBt = [[UIButton alloc] initWithFrame:(CGRect){0,0,frame.size.height,frame.size.height}];
         [self.searchBt setBackgroundColor:[UIColor clearColor]];
         [self.searchBt addTarget:self action:@selector(searchBarClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.searchBt setImage:[UIImage imageNamed:@"navi_search_blue.png"] forState:UIControlStateNormal];
-        self.searchBt.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleRightMargin|UIViewAutoresizingFlexibleTopMargin;
+        self.searchBt.autoresizingMask = UIViewAutoresizingNone;
         [self addSubview:self.searchBt];
         
         self.searchTextLabel = [[UITextField alloc] initWithFrame:(CGRect){CGRectGetMaxX(self.searchBt.frame),0,frame.size.width - CGRectGetMaxX(self.searchBt.frame) - kcancelButtonWidth,frame.size.height}];
@@ -106,7 +108,7 @@
         [self.cancelBt setBackgroundColor:[UIColor clearColor]];
         [self.cancelBt setTitle:@"取消" forState:UIControlStateNormal];
         [self.cancelBt.titleLabel setFont:kcancelButtonFont];
-        self.cancelBt.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin|UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleTopMargin;
+        self.cancelBt.autoresizingMask = UIViewAutoresizingNone;
         [self.cancelBt addTarget:self action:@selector(cancelBtClicked:) forControlEvents:UIControlEventTouchUpInside];
         [self.cancelBt setHidden:YES];
         [self addSubview:self.cancelBt];
@@ -118,6 +120,15 @@
 #pragma mark property
 -(NSString *)searchText{
     return self.searchTextLabel.text;
+}
+
+-(void)setIsSearch:(BOOL)isSearch{
+    _isSearch = isSearch;
+    if (!isSearch) {
+        self.searchTextLabel.text = @"";
+        [self.searchTextLabel resignFirstResponder];
+        [self.cancelBt setHidden:YES];
+    }
 }
 #pragma mark --
 @end

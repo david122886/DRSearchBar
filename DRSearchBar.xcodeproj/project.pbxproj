@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63AB496918862105004E0824 /* DRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AB496818862105004E0824 /* DRSearchBar.m */; };
+		63CBF49B188CCEB3002A8DC9 /* DRSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 63CBF49A188CCEB3002A8DC9 /* DRSearchBar.m */; };
 		63D284281883DFE8005D8721 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D284271883DFE8005D8721 /* Foundation.framework */; };
 		63D2842A1883DFE8005D8721 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D284291883DFE8005D8721 /* CoreGraphics.framework */; };
 		63D2842C1883DFE8005D8721 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D2842B1883DFE8005D8721 /* UIKit.framework */; };
@@ -38,8 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63AB496718862105004E0824 /* DRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSearchBar.h; sourceTree = "<group>"; };
-		63AB496818862105004E0824 /* DRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSearchBar.m; sourceTree = "<group>"; };
+		63CBF499188CCEB3002A8DC9 /* DRSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRSearchBar.h; sourceTree = "<group>"; };
+		63CBF49A188CCEB3002A8DC9 /* DRSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRSearchBar.m; sourceTree = "<group>"; };
 		63D284241883DFE8005D8721 /* DRSearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DRSearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63D284271883DFE8005D8721 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		63D284291883DFE8005D8721 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,8 +173,8 @@
 		63F1C2191884FAC200EE711F /* DRSearchBar */ = {
 			isa = PBXGroup;
 			children = (
-				63AB496718862105004E0824 /* DRSearchBar.h */,
-				63AB496818862105004E0824 /* DRSearchBar.m */,
+				63CBF499188CCEB3002A8DC9 /* DRSearchBar.h */,
+				63CBF49A188CCEB3002A8DC9 /* DRSearchBar.m */,
 				63F1C21D1884FAC200EE711F /* images */,
 			);
 			path = DRSearchBar;
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				63D2843E1883DFE8005D8721 /* ViewController.m in Sources */,
-				63AB496918862105004E0824 /* DRSearchBar.m in Sources */,
+				63CBF49B188CCEB3002A8DC9 /* DRSearchBar.m in Sources */,
 				63D284381883DFE8005D8721 /* AppDelegate.m in Sources */,
 				63D284341883DFE8005D8721 /* main.m in Sources */,
 			);
